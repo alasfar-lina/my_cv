@@ -1,0 +1,303 @@
+
+\documentclass[11pt,article,oneside]{memoir}   
+\usepackage{org-preamble-xelatex} 
+\usepackage{fontawesome,url}
+
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{Lina ALSFAR}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Max-Planck-Institute for Nuclear Physics}
+\def\myaddress{Saupfercheckweg 1, 69117 Heidelberg  Germany}
+\def\myemail{alasfar@mpi-hd.mpg.de}
+%\def\myweb{cern}
+\def\myphone{(+33) 6 41 17 69 81}
+%\def\myfax{(919) 660-5623}
+%\def\mytwitter{@salwamsKSU}
+\def\myversion{Oct.-2018}
+\def\myrevision{}
+
+
+\def\myaffiliation{Max-Planck-Institute for Nuclear Physics}
+\def\myauthor{Lina Alasfar}
+\date{} % not used (revision control instead)
+\def\mykeywords{Lina, ALASFAR, Lina ALASFAR, Vita, CV, Resume, Physics}
+
+%%%------------------------------------------------------------------------  
+%%% Git version tracking 
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% \input{vc}
+
+%% uncomment if you want to use biblatex
+% \usepackage{enable-biblatex}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+
+%% Use Caladea instead, which is already available on the server
+\setromanfont[Mapping={tex-text}, 
+	Numbers={OldStyle},
+	Ligatures={Common}]%{Minion Pro}
+    {Caladea}
+    
+%% Use Cabin instead, which is already available on the server
+\setsansfont[Mapping=tex-text,
+	Ligatures={Common}, 
+	Colour=AA0000]%{Unit-Medium}
+    {Cabin}
+
+%% Use Fira Mono instead, which is already available on the server
+\setmonofont[Mapping=tex-text,Scale=0.85]%{PragmataPro} 
+{Fira Mono}
+
+% \newfontface\scheader[SmallCapsFont={Minion Pro},SmallCapsFeatures={Letters=SmallCaps}]{Minion Pro}
+%% Caladea doesn't have small caps, so don't use this.
+\let\scheader\relax
+
+% \newfontface\addressblock[Mapping={tex-text}, 
+% 	Numbers={OldStyle},
+% 	Ligatures={Common}]{Minion Pro Medium Caption}
+\newfontface\addressblock[Mapping={tex-text}, 
+	Numbers={OldStyle},
+	Ligatures={Common}]{Caladea}
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+  %% enumerate substitute
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+
+
+%% [optional] custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+
+% These lines will insert git revision info in the footer, using the vc
+% package---see docs for vc package for details. Comment out this line
+% if you're not using vc, and also remove the \input{vc} line above.
+\pagestyle{kjh}
+\thispagestyle{kjhgit}
+
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+ \flushright {\footnotesize 
+ \href{https://www.mpi-hd.mpg.de/mpi/en/hfm/home/}{LHCb Experiment}-- Particle Physics Group\\Max Planck Institute for Nuclear Physics \\ \vspace{-0.05in} Saupfercheckweg 1, 69117 Heidelberg . Germany}  
+  
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.4in}
+  \flushright \footnotesize  \addressblock \myphone \, \faPhone \\ 
+ % {\scriptsize  \texttt{\href{@twitter}{\mytwitter}} \, \faTwitter }  \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
+%  {\scriptsize  \texttt{\href{\myweb}{\myweb}} \, \faGlobe}
+\end{minipage}
+
+\medskip
+
+%% Name 
+% \noindent{\LARGE\scheader \textsc{kieran healy}}
+\noindent{\Large\bfseries  Lina ALASFAR}
+\reversemarginpar
+
+\bigskip       
+
+
+%% Appointments
+ \medskip
+\marginhead{\sffamily appointments}
+
+\ind Researcher (LHCb experiment):: Max Planck Institute for Nuclear Physics Heidelberg. (Germany), (\textbf{Current}) \normalsize \vspace{0.05in}
+
+\ind Researcher, Laboratoire de Physique Corpusculaire Clermont-Ferrand. (France),  Feb. 2018--Jul 2018.
+
+\ind  Demonstrator, King Saud University University,(Saudi Arabia)  May 2016--May 2017.
+
+\bigskip
+
+%% Langueges
+\marginhead{\sffamily {{\vskip -0.23em} languages}}
+ \ind Arabic, Mother language\\
+  \ind English, Fluent\\
+ \ind French, Intermediate\\
+ \ind German, Basic\\
+ \bigskip
+%% Education
+
+\marginhead{\sffamily {{\vskip -0.23em} education}}
+
+%\noindent\emph{Princeton University \vspace{0.01in}}
+
+\ind Master-II  \textit{with Honour Mention} (equiv. MRes.), Particle Physics and the Universe, Université Clermont-Auvergne. (Clermont-FD, France) 2018.
+
+\ind \hspace{0.35in} \footnotesize Dissertation: \emph{Search for the $B to K^*( 892) \tau \tau$ decaywith the LHCb spectrometer for testing	lepton universality in quark transitions.’.\normalsize \vspace{0.05in}}
+
+\ind B.Sc. Physics-First Class Honour, King Saud University,(Saudi Arabia) 2016.
+
+\bigskip
+ 
+%% Publications
+\marginhead{\sffamily {\vskip 0.35em} publications}
+\medskip
+
+
+\vspace{-0.075in}
+
+\normalsize
+
+\bigskip
+\noindent\emph{Journal articles \vspace{0.05in}}
+ 
+%% Use revnumerate environment if numbered publications are needed. 
+%% (Include it above in the preamble).
+%\renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+\begin{enumerate}
+
+\item Alsaleh, S. and Alasfar L. 2017 ``\href{https://arxiv.org/abs/1611.02573}{ER= EPR and Non-Perturbative Action Integrals
+	for Quantum Gravity}.\emph{	Int. J. Geom. Methods Mod. Phys }Vol. 14
+
+\item Mir Faizal, Amani Ashour, Mohammad Alcheikh, Lina Al Asfar, Salwa Alsaleh, Ahmed Mahroussah 2017 `` \href{https://arxiv.org/abs/1710.06918}{Quantum Fluctuations from Thermal Fluctuations in Jacobson Formalism
+}'' \emph{Eur. Phys. J. C } 77:608
+
+\item Momeni,D ; Myrzakul,A. ; Myrzakulov, R. ; Faizal,M.; Alsaleh, S. and Alasfar,
+L. 2017 `` \href{https://arxiv.org/abs/1704.05785}{Thermodynamics of AdS spacetime via Regularized Fidelity Susceptibility
+}'' Under Review in Eur. Phys. J. C
+\item B. Pourhassan, M. Faizal, S. Upadhyay and L. A. Asfar 2017, `` \href{https://arxiv.org/abs/1708.00438} {Thermal Fluctuations in a Hyperscaling
+Violation Background},`` Eur. Phys. J. C 77 
+\item  S. Alsaleh, L. Alasfar, M. Faizal and A. F. Ali. 2018 ``\href{Quantum no-singularity theorem from geometric flows
+}{”Quantum no-singularity theorem
+	from geometric flows}'' Int. J. Geom. Methods Mod. Phys
+
+\item L. Alasfar, S. Alsaleh, A. Farag Ali and E. Vagenas. 2018 `` \href{https://arxiv.org/abs/1706.06502}{The GUP and quantum
+	Raychaudhuri equation}'' Nuclear Physics B 
+
+\item A. Bhat, S. Alsaleh, D. Momeni, A. Rehman, Z. Zaz,
+M. Faizal, A. Jellal and L. Alasfar 2018 `` \href{https://arxiv.org/abs/1803.00051}{Time-Dependent Strain in Graphene} ''  Europhysical  Journal B .
+
+\item  M.~C.~Braidotti, C.~Conti, M.~Faizal, S.~Dey, L.~Alasfar, S.~Alsaleh and A.~Ashour, `` \href{https://arxiv.org/abs/1803.10218}{Path Integral for Non-Paraxial Optics}'' \emph{Euro Physics Letters (EPL)}. 
+
+
+
+\end{enumerate}
+
+\bigskip
+
+%\noindent\emph {Conferences \vspace{0.05in}}
+%% \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
+%% \begin{revnumerate}
+%\begin{enumerate}
+%	\item S. Alsaleh, L. Alasfar, M. Faizal and A. F. Ali, “ Quantum geometric flows”
+%	The 3rd Karl Schwarzchild Conference, Frankfurt Germany
+%\end{enumerate}
+
+
+
+%\end{revnumerate}
+
+\bigskip 
+
+%\newpage
+
+ 
+% %\end{revnumerate}
+ \bigskip
+
+%% Presentations
+
+
+\bigskip 
+
+
+
+\marginhead{{\vskip 0.9em}teaching\newline }
+\medskip
+
+
+\vspace{-0.075in}
+
+\normalsize
+
+\bigskip
+\noindent\emph{Undergraduate courses\vspace{0.05in}}\\
+\ind \textbf{ King Saud University- tutorials :} Quantum mechanics, statistical physics, modern physics.    .\\
+\ind \textbf{ King Saud University- labs :} Electromagnetism, nuclear physics, wave physics and general physics    .
+\normalsize
+
+\bigskip
+%\noindent\emph{Graduate courses\vspace{0.05in}}\\
+%\textbf{ King Saud University :} 551 Physics, 508 Physics and 506 Physics.
+\bigskip
+\marginhead{\sffamily Research experience}
+
+\ind Experimental particle physics \normalsize \vspace{0.05in}\\
+Involving low-level data analysis, programming in C++ with (ROOT), python~(data analysis and  machine learning) and GO.
+\normalsize
+
+\bigskip
+\ind Theoretical particle physics \normalsize \vspace{0.05in}\\
+Basic knowledge of some FROTRAN algorithms for simulating particle interactions like  \textit{Madgraph} and \textit{Delphes}. \\
+\ind Phenomenology of quantum gravity  \normalsize \vspace{0.05in}\\
+\ind Writing research articles  \normalsize \vspace{0.05in}\\
+Using \LaTeX, and other tools like \textbf{FeynDiagram} library.
+\vspace{-0.075in}
+
+\normalsize
+
+\bigskip
+\marginhead{\sffamily service to the \newline community \newline and profession}
+\begin{itemize}
+\item Writing scientific articles for non-technical scientific journals for the public (Al-Quafila Journal and
+Scientific Saudi)
+\item Judging science research contest organised by King Saud University.
+\end{itemize}
+\normalsize
+
+\bigskip
+\marginhead{\sffamily research \newline interests}
+Experiments and phenomenology of beyond standard model in the flavour sector.
+\end{document}
